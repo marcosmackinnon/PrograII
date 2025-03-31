@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const mainController = require('../controllers/mainController');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// PUNTO 1 - Creamos rutas y las conectamos con controladores
+router.get('/', mainController.index);
+router.get('/login', mainController.login);
+router.get('/register', mainController.register);
+router.get('/perfil', mainController.profile);
+router.get('/producto/agregar', mainController.productAdd);
+router.get('/producto/:id', mainController.product);
+router.get('/buscar', mainController.searchResults);
+
 
 module.exports = router;

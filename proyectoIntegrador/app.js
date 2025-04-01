@@ -7,6 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+//conecto el producto js (que es la ruta que agregamos para ordenarlo)
+var productRouter = require('./routes/product')
+
 var app = express();
 
 // view engine setup

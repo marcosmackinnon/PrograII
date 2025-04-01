@@ -3,6 +3,8 @@ const mainController = {
       res.render('index');
     },
   
+
+    
     login: function(req, res) {
       res.render('login');
     },

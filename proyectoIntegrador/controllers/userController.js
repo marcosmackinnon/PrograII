@@ -20,4 +20,5 @@ const userController = {
 
 }
 
-module.exports = mainController;
+module.exports = userController;
+

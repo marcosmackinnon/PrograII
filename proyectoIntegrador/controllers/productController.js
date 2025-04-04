@@ -13,4 +13,4 @@ const productController = {
 
 
 
-module.exports = mainController;
+module.exports = productController;

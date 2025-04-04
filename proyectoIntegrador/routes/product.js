@@ -1,5 +1,5 @@
-router.get('/producto/agregar', mainController.productAdd);
-router.get('/producto/:id', mainController.product);
+router.get('/producto/agregar', productController.productAdd);
+router.get('/producto/:id', productController.product);
 
 // exporto la ruta 
 

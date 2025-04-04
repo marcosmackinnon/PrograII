@@ -1,4 +1,7 @@
 
+const usersData = require('../data/usersData') // concectamos el users data 
+
+
 const userController = {
 
   login: function(req, res) {
@@ -10,7 +13,8 @@ const userController = {
   },
 
   profile: function(req, res) {
-    res.render('profile');
+    const user = usersData[0]; // esta bien?
+    res.render('profile', { user }); // le mandas el profile y el user 
   },
 
 

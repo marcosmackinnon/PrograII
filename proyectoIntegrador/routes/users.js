@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/login', mainController.login);
-router.get('/register', mainController.register);
-router.get('/perfil', mainController.profile);
+router.get('/login', userController.login);
+router.get('/register', userController.register);
+router.get('/perfil', userController.profile);
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

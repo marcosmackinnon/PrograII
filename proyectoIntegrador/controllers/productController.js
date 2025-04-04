@@ -5,7 +5,8 @@ const productController = {
       },
     
       productAdd: function(req, res) {
-        res.render('product-add');
+        const user = usersData[0];  //  esta bien??
+        res.render('product-add', { user });  // le mandas el profile y el user 
       },
 
 }

@@ -24,7 +24,7 @@
       id: 1,
       nombre: "Cafetera",
       descripcion: "Cafetera moulinex",
-      imagen: "/images/products/img-cafetera-moulinex.jpg", //esta bien?
+      imagen: "/images/products/img-cafetera-moulinex.jpg", 
       comentarios: [
         {
           nombre: "Marcos",

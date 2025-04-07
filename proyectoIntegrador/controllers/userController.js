@@ -1,5 +1,5 @@
 
-const usersData = require('../data/usersData') // concectamos el users data 
+const usersData = require("../db/usersData") // concectamos el users data 
 
 
 const userController = {

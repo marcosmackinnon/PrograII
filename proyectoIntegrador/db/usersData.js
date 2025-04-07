@@ -7,13 +7,13 @@
   const users = [
     {
       email: "ejemplo@correo.com",
-      usuario: "Marcos",
+      nombre: "Marcos",
       contrasena: "1234",
       nacimiento: "2000-05-02"
     },
     {
       email: "ejemplo2@correo.com",
-      usuario: "Silvestre",
+      nombre: "Silvestre",
       contrasena: "4321",
       nacimiento: "2005-08-11"
     }
@@ -24,10 +24,10 @@
       id: 1,
       nombre: "Cafetera",
       descripcion: "Cafetera moulinex",
-      imagen: "images/products/img-cafetera-moulinex.jpg", //esta bien?
+      imagen: "/images/products/img-cafetera-moulinex.jpg", //esta bien?
       comentarios: [
         {
-          usuario: "Marcos",
+          nombre: "Marcos",
           texto: "Muy cómodas para correr.",
           imagenPerfil: ""
         }
@@ -40,7 +40,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Lucía",
+          nombre: "Lucía",
           texto: "Excelente calidad de imagen.",
           imagenPerfil: ""
         }
@@ -53,7 +53,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Juan",
+          nombre: "Juan",
           texto: "Muy buena para estudiar y trabajar.",
           imagenPerfil: ""
         }
@@ -66,7 +66,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Valentina",
+          nombre: "Valentina",
           texto: "Súper rápido y la cámara es genial.",
           imagenPerfil: ""
         }
@@ -79,7 +79,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Carlos",
+          nombre: "Carlos",
           texto: "Muy práctica y potente.",
           imagenPerfil: ""
         }
@@ -92,7 +92,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Laura",
+          nombre: "Laura",
           texto: "Chiquito pero con buen sonido.",
           imagenPerfil: ""
         }
@@ -105,7 +105,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Tomás",
+          nombre: "Tomás",
           texto: "Muy cómoda para jugar varias horas.",
           imagenPerfil: ""
         }
@@ -118,7 +118,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Sofía",
+          nombre: "Sofía",
           texto: "Entraron todos mis libros.",
           imagenPerfil: ""
         }
@@ -131,7 +131,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Mauro",
+          nombre: "Mauro",
           texto: "Buena batería y calidad de sonido.",
           imagenPerfil: ""
         }
@@ -144,7 +144,7 @@
       imagen: "",
       comentarios: [
         {
-          usuario: "Agustina",
+          nombre: "Agustina",
           texto: "Muy cómodo y preciso.",
           imagenPerfil: ""
         }

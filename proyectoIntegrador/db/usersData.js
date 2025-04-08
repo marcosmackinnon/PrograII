@@ -29,7 +29,7 @@
         {
           nombre: "Marcos",
           texto: "Muy cómodas para correr.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -37,12 +37,12 @@
       id: 2,
       nombre: "Smart TV Samsung 55''", //cambiar los productos
       descripcion: "Smart TV 4K con acceso a plataformas de streaming.",
-      imagen: "",
+      imagen: "/images/products/img-tv-samsung-smart.jpg",
       comentarios: [
         {
           nombre: "Lucía",
           texto: "Excelente calidad de imagen.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -50,12 +50,12 @@
       id: 3,
       nombre: "Notebook Lenovo IdeaPad 3",
       descripcion: "Notebook con procesador AMD Ryzen 5 y 8GB de RAM.",
-      imagen: "",
+      imagen: "/images/products/img-macbook-pro-2019.jpg",
       comentarios: [
         {
           nombre: "Juan",
           texto: "Muy buena para estudiar y trabajar.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -63,12 +63,12 @@
       id: 4,
       nombre: "Celular iPhone 13",
       descripcion: "Apple iPhone 13 con 128GB de almacenamiento.",
-      imagen: "",
+      imagen: "/images/products/img-samsung-galaxy-s10.jpg",
       comentarios: [
         {
           nombre: "Valentina",
           texto: "Súper rápido y la cámara es genial.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -76,12 +76,12 @@
       id: 5,
       nombre: "Aspiradora Philips",
       descripcion: "Aspiradora sin bolsa con tecnología ciclónica.",
-      imagen: "",
+      imagen: "/images/products/img-cafetera-moulinex.jpg",
       comentarios: [
         {
           nombre: "Carlos",
           texto: "Muy práctica y potente.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -89,12 +89,12 @@
       id: 6,
       nombre: "Parlante JBL GO 3",
       descripcion: "Parlante portátil resistente al agua.",
-      imagen: "",
+      imagen: "/images/products/img-tv-samsung-smart.jpg",
       comentarios: [
         {
           nombre: "Laura",
           texto: "Chiquito pero con buen sonido.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -102,12 +102,12 @@
       id: 7,
       nombre: "Silla gamer",
       descripcion: "Silla ergonómica reclinable con apoyabrazos.",
-      imagen: "",
+      imagen: "/images/products/img-macbook-pro-2019.jpg",
       comentarios: [
         {
           nombre: "Tomás",
           texto: "Muy cómoda para jugar varias horas.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -115,12 +115,12 @@
       id: 8,
       nombre: "Mochila Jansport",
       descripcion: "Mochila clásica resistente para uso diario.",
-      imagen: "",
+      imagen: "/images/products/img-cafetera-moulinex.jpg",
       comentarios: [
         {
           nombre: "Sofía",
           texto: "Entraron todos mis libros.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -128,12 +128,12 @@
       id: 9,
       nombre: "Auriculares Sony WH-CH520",
       descripcion: "Auriculares inalámbricos con Bluetooth y micrófono.",
-      imagen: "",
+      imagen: "/images/products/img-samsung-galaxy-s10.jpg",
       comentarios: [
         {
           nombre: "Mauro",
           texto: "Buena batería y calidad de sonido.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     },
@@ -141,12 +141,12 @@
       id: 10,
       nombre: "Mouse Logitech M280",
       descripcion: "Mouse inalámbrico ergonómico con receptor USB.",
-      imagen: "",
+      imagen: "/images/products/img-tv-samsung-smart.jpg",
       comentarios: [
         {
           nombre: "Agustina",
           texto: "Muy cómodo y preciso.",
-          imagenPerfil: ""
+          imagenPerfil: "/images/users/default-image.png"
         }
       ]
     }

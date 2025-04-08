@@ -6,7 +6,7 @@
 
   const users = [
     {
-      email: "ejemplo@correo.com",
+      email: "marcoscrack@gmail.com",
       nombre: "Marcos",
       contrasena: "1234",
       nacimiento: "2000-05-02"
@@ -28,9 +28,10 @@
       comentarios: [
         {
           nombre: "Marcos",
-          texto: "Muy cómodas para correr.",
+          texto: "Muy linda hace altos cafes.",
           imagenPerfil: "/images/users/default-image.png"
         }
+        // 
       ]
     },
     {
@@ -42,7 +43,7 @@
         {
           nombre: "Lucía",
           texto: "Excelente calidad de imagen.",
-          imagenPerfil: "/images/users/default-image.png"
+          imagenPerfil:"/images/users/default-image.png"
         }
       ]
     },

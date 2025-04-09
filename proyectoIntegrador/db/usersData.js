@@ -6,12 +6,14 @@
 
   const users = [
     {
+      id: 1, //estos ID son conceptuales, esta bien que esten por mas que no los usemos
       email: "marcoscrack@gmail.com",
       nombre: "Marcos",
       contrasena: "1234",
       nacimiento: "2000-05-02"
     },
     {
+      id: 2, 
       email: "ejemplo2@correo.com",
       nombre: "Silvestre",
       contrasena: "4321",

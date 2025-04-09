@@ -22,7 +22,7 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2> 
+			<h2 class="products-title"><%= product.nombre %></h2> <!-- esto remplaza "Nombre de producto". y hace que funcione con el ID -->
 			<p class="product-detail-description">
 				<a href="/product/agregar">Editar</a>
 			</p>
@@ -30,9 +30,8 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/images/products/img-cafetera-moulinex.jpg" alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						cafetera roja muy linda</p>
+					<img src="<%= product.imagen %>" alt="<%= product.nombre %>" class="product-detail-img">
+					<p class="product-detail-description"><%= product.descripcion %></p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">

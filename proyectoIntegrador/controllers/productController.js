@@ -15,7 +15,7 @@ const productController = {
     },
     
       productAdd: function(req, res) {
-        const user = usersData.users[0]; 
+        const user = usersData.users; 
         res.render('product-add', { user });  // le mandas a el product-add, el user 
       },
 

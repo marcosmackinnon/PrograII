@@ -4,13 +4,13 @@
 
 /*====== Variables ======*/
 :root {
-  --purple: #6247de;
+  --black:rgb(2, 2, 2)2;
   --dark-blue: #03264C;
   --light-blue: #1259c3;
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --base-font-family: 'Montserrat', san-serif
 }
 
 
@@ -68,7 +68,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--purple);
+  background-color: var(--grey);
 }
 
 .main-header_home-link,
@@ -154,7 +154,7 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(/images/mercedezlogogris.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -163,15 +163,20 @@ hr {
 
 
 /*====== Products ======*/
+.bienvenido{
+  padding-left: 50px;
+}
+
 .products-wrapper {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .products-title {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2.4em;
   font-weight: 400;
-  color: var(--gray);
+  color: var(--black);
 }
 
 .product-box {
@@ -317,6 +322,7 @@ hr {
 }
 
 .product-detail-title {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   font-size: 2.8em;
 }
@@ -465,6 +471,7 @@ textarea.form-input {
 }
 
 .main-title{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 25px;
   margin-bottom: 10px;
 }
@@ -485,7 +492,7 @@ textarea.form-input {
   }
 
   .banner {
-    height: 320px;
+    height: 520px;
   }
 
   .btn-toggle-navbar {

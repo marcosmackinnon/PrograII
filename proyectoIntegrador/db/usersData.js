@@ -1,162 +1,146 @@
+let data = {
 
+  users: {
+    email: "marcoscrack@gmail.com",
+    usuario: "Marcos",
+    pass: "1234",
+    fecha: "2000-05-02",
+    dni: "44500111",
+    foto: "/images/users/default-image.png"
+  },
 
-
-
-  // ESTO PREGUNTARLE SI SE PUEDE HACER (OSEA SI SERIA EL MODULO DE DATOS QUE DECIMOS EN EL PUNTO 8)
-
-  const users = [
-    {
-      id: 1, //estos ID son conceptuales, esta bien que esten por mas que no los usemos
-      email: "marcoscrack@gmail.com",
-      nombre: "Marcos",
-      contrasena: "1234",
-      nacimiento: "2000-05-02"
-    },
-    {
-      id: 2, //Este user es ejemplo conceptual
-      email: "ejemplo2@correo.com",
-      nombre: "Silvestre",
-      contrasena: "4321",
-      nacimiento: "2005-08-11"
-    }
-  ];
-  
-  const productos = [
+  productos: [
     {
       id: 1,
-      nombre: "Cafetera",
-      descripcion: "Cafetera moulinex",
-      imagen: "/images/products/img-cafetera-moulinex.jpg", 
+      imagen: "/images/autos/mercedesA200.avif",
+      nombre: "Mercedes-Benz A200",
+      descripcion: "Auto compacto y moderno.",
       comentarios: [
         {
-          nombre: "Marcos",
-          texto: "Muy linda hace altos cafes.",
-          imagenPerfil: "/images/users/default-image.png"
+          nombre: "Lucía",
+          comentario: "¡Qué fachero!",
+          imagen: "/images/users/default-image.png"
         }
-        // 
       ]
     },
     {
       id: 2,
-      nombre: "Smart TV Samsung 55''", //cambiar los productos
-      descripcion: "Smart TV 4K con acceso a plataformas de streaming.",
-      imagen: "/images/products/img-tv-samsung-smart.jpg",
+      imagen: "/images/autos/mercedesC200.jpeg",
+      nombre: "Mercedes-Benz C200",
+      descripcion: "Cómodo y elegante.",
       comentarios: [
         {
-          nombre: "Lucía",
-          texto: "Excelente calidad de imagen.",
-          imagenPerfil:"/images/users/default-image.png"
+          nombre: "Mateo",
+          comentario: "Muy cómodo para ciudad.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 3,
-      nombre: "Notebook Lenovo IdeaPad 3",
-      descripcion: "Notebook con procesador AMD Ryzen 5 y 8GB de RAM.",
-      imagen: "/images/products/img-macbook-pro-2019.jpg",
+      imagen: "/images/autos/mercedezAMGGT.jpeg",
+      nombre: "Mercedes-Benz AMG GT",
+      descripcion: "Deportivo de alto rendimiento.",
       comentarios: [
         {
           nombre: "Juan",
-          texto: "Muy buena para estudiar y trabajar.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Una nave espacial.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 4,
-      nombre: "Celular iPhone 13",
-      descripcion: "Apple iPhone 13 con 128GB de almacenamiento.",
-      imagen: "/images/products/img-samsung-galaxy-s10.jpg",
+      imagen: "/images/autos/mercedezCLA250.jpeg",
+      nombre: "Mercedes-Benz CLA 250",
+      descripcion: "Estilo y eficiencia.",
       comentarios: [
         {
           nombre: "Valentina",
-          texto: "Súper rápido y la cámara es genial.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "¡Divino!",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 5,
-      nombre: "Aspiradora Philips",
-      descripcion: "Aspiradora sin bolsa con tecnología ciclónica.",
-      imagen: "/images/products/img-cafetera-moulinex.jpg",
+      imagen: "/images/autos/mercedezEClass.webp",
+      nombre: "Mercedes-Benz E-Class",
+      descripcion: "Auto para la familia.",
       comentarios: [
         {
           nombre: "Carlos",
-          texto: "Muy práctica y potente.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Muy cómodo para viajar.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 6,
-      nombre: "Parlante JBL GO 3",
-      descripcion: "Parlante portátil resistente al agua.",
-      imagen: "/images/products/img-tv-samsung-smart.jpg",
+      imagen: "/images/autos/mercedezEQA.jpeg",
+      nombre: "Mercedes-Benz EQA",
+      descripcion: "Eléctrico y silencioso.",
       comentarios: [
         {
           nombre: "Laura",
-          texto: "Chiquito pero con buen sonido.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Casi no hace ruido, lo amo.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 7,
-      nombre: "Silla gamer",
-      descripcion: "Silla ergonómica reclinable con apoyabrazos.",
-      imagen: "/images/products/img-macbook-pro-2019.jpg",
+      imagen: "/images/autos/mercedezGLA200.avif",
+      nombre: "Mercedes-Benz GLA 200",
+      descripcion: "Lindo y urbano.",
       comentarios: [
         {
           nombre: "Tomás",
-          texto: "Muy cómoda para jugar varias horas.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Perfecto para ciudad.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 8,
-      nombre: "Mochila Jansport",
-      descripcion: "Mochila clásica resistente para uso diario.",
-      imagen: "/images/products/img-cafetera-moulinex.jpg",
+      imagen: "/images/autos/mercedezGLB200.jpeg",
+      nombre: "Mercedes-Benz GLB 200",
+      descripcion: "Ideal para viajes.",
       comentarios: [
         {
           nombre: "Sofía",
-          texto: "Entraron todos mis libros.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Viaje a la costa y fue un lujo.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 9,
-      nombre: "Auriculares Sony WH-CH520",
-      descripcion: "Auriculares inalámbricos con Bluetooth y micrófono.",
-      imagen: "/images/products/img-samsung-galaxy-s10.jpg",
+      imagen: "/images/autos/mercedezGLC300.avif",
+      nombre: "Mercedes-Benz GLC 300",
+      descripcion: "SUV con buen espacio.",
       comentarios: [
         {
           nombre: "Mauro",
-          texto: "Buena batería y calidad de sonido.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Gran espacio para todo.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     },
     {
       id: 10,
-      nombre: "Mouse Logitech M280",
-      descripcion: "Mouse inalámbrico ergonómico con receptor USB.",
-      imagen: "/images/products/img-tv-samsung-smart.jpg",
+      imagen: "/images/autos/mercedezGLE450.webp",
+      nombre: "Mercedes-Benz GLE 450",
+      descripcion: "Grande y potente.",
       comentarios: [
         {
           nombre: "Agustina",
-          texto: "Muy cómodo y preciso.",
-          imagenPerfil: "/images/users/default-image.png"
+          comentario: "Una bestia. Me encanta.",
+          imagen: "/images/users/default-image.png"
         }
       ]
     }
-  ];
-   
-  module.exports = {
-    users,
-    productos
-  };
-  
+  ]
+};
+
+module.exports = data;

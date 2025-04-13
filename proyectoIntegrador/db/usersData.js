@@ -13,7 +13,7 @@
       nacimiento: "2000-05-02"
     },
     {
-      id: 2, 
+      id: 2, //Este user es ejemplo conceptual
       email: "ejemplo2@correo.com",
       nombre: "Silvestre",
       contrasena: "4321",

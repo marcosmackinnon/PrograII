@@ -21,7 +21,13 @@ let data = {
           comentario: "¡Qué fachero!",
           imagen: "/images/users/default-image.png"
         }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD, esta buenardo!",
+          imagen: "/images/users/default-image.png"
+        }
       ]
+      
     },
     {
       id: 2,
@@ -32,6 +38,11 @@ let data = {
         {
           nombre: "Mateo",
           comentario: "Muy cómodo para ciudad.",
+          imagen: "/images/users/default-image.png"
+        }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
           imagen: "/images/users/default-image.png"
         }
       ]
@@ -47,6 +58,11 @@ let data = {
           comentario: "Una nave espacial.",
           imagen: "/images/users/default-image.png"
         }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
+          imagen: "/images/users/default-image.png"
+        }
       ]
     },
     {
@@ -58,6 +74,11 @@ let data = {
         {
           nombre: "Valentina",
           comentario: "¡Divino!",
+          imagen: "/images/users/default-image.png"
+        }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
           imagen: "/images/users/default-image.png"
         }
       ]
@@ -73,6 +94,11 @@ let data = {
           comentario: "Muy cómodo para viajar.",
           imagen: "/images/users/default-image.png"
         }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
+          imagen: "/images/users/default-image.png"
+        }
       ]
     },
     {
@@ -84,6 +110,11 @@ let data = {
         {
           nombre: "Laura",
           comentario: "Casi no hace ruido, lo amo.",
+          imagen: "/images/users/default-image.png"
+        }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
           imagen: "/images/users/default-image.png"
         }
       ]
@@ -99,6 +130,11 @@ let data = {
           comentario: "Perfecto para ciudad.",
           imagen: "/images/users/default-image.png"
         }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
+          imagen: "/images/users/default-image.png"
+        }
       ]
     },
     {
@@ -110,6 +146,11 @@ let data = {
         {
           nombre: "Sofía",
           comentario: "Viaje a la costa y fue un lujo.",
+          imagen: "/images/users/default-image.png"
+        }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
           imagen: "/images/users/default-image.png"
         }
       ]
@@ -125,6 +166,11 @@ let data = {
           comentario: "Gran espacio para todo.",
           imagen: "/images/users/default-image.png"
         }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
+          imagen: "/images/users/default-image.png"
+        }
       ]
     },
     {
@@ -136,6 +182,11 @@ let data = {
         {
           nombre: "Agustina",
           comentario: "Una bestia. Me encanta.",
+          imagen: "/images/users/default-image.png"
+        }
+        ,{
+          nombre: "Marcos",
+          comentario: "¡GOD!",
           imagen: "/images/users/default-image.png"
         }
       ]

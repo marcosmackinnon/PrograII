@@ -35,47 +35,17 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/users/perfil"> <%= product.comentarios[0].nombre %> : </a> </strong>
-								<%= product.comentarios[0].comentario %>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/perfil"><%= product.comentarios[0].nombre %> : </a> </strong>
-									<%= product.comentarios[0].comentario %> :</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/perfil"><%= product.comentarios[0].nombre %> :</a> </strong>
-									<%= product.comentarios[0].comentario %> 
+						<% for (let i = 0; i < product.comentarios.length; i++) { %>
+							<article>
+								<img src="<%= product.comentarios[i].imagen %>" alt="foto perfil">
+								<div class="data">
+									<p class="user">
+										<strong><a href="/users/perfil"><%= product.comentarios[i].nombre %>:</a></strong>
+										<%= product.comentarios[i].comentario %>
 									</p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/perfil"><%= product.comentarios[0].nombre %> :</a> </strong>
-									<%= product.comentarios[0].comentario %> </p>
-							</div>
-						</article>
-						<article>
-							<img src="https://via.placeholder.com/35" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/users/perfil"><%= product.comentarios[0].nombre %> :</a> </strong>
-									<%= product.comentarios[0].comentario %> </p>
-							</div>
-						</article>
+								</div>
+							</article>
+						<% } %>
 
 					</section>
 					<form class="form" action="" method="POST">

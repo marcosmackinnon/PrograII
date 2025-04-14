@@ -5,7 +5,7 @@ const productController = require('../controllers/productController'); //trae el
 
 
 router.get('/agregar', productController.productAdd);
-router.get('/:id', productController.product);
+router.get('/:id', productController.product); 
 
 // exporto la ruta 
 

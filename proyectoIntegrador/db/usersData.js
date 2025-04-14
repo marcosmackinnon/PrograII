@@ -2,11 +2,11 @@ let data = {
 
   users: {
     email: "marcoscrack@gmail.com",
-    usuario: "Marcos",
+    usuario: "Marcos Colapinto",
     pass: "1234",
     fecha: "2000-05-02",
     dni: "44500111",
-    foto: "/images/users/default-image.png"
+    foto:  "/images/perfil.png"
   },
 
   productos: [
@@ -19,12 +19,12 @@ let data = {
         {
           nombre: "Lucía",
           comentario: "¡Qué fachero!",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD, esta buenardo!",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
       ]
       
@@ -38,12 +38,12 @@ let data = {
         {
           nombre: "Mateo",
           comentario: "Muy cómodo para ciudad.",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
       ]
     },
@@ -56,12 +56,12 @@ let data = {
         {
           nombre: "Juan",
           comentario: "Una nave espacial.",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
       ]
     },
@@ -74,12 +74,12 @@ let data = {
         {
           nombre: "Valentina",
           comentario: "¡Divino!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
       ]
     },
@@ -92,12 +92,12 @@ let data = {
         {
           nombre: "Carlos",
           comentario: "Muy cómodo para viajar.",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
       ]
     },
@@ -110,12 +110,12 @@ let data = {
         {
           nombre: "Laura",
           comentario: "Casi no hace ruido, lo amo.",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
       ]
     },
@@ -128,12 +128,12 @@ let data = {
         {
           nombre: "Tomás",
           comentario: "Perfecto para ciudad.",
-          imagen: "/images/users/default-image.png"
+          imagen: "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
       ]
     },
@@ -146,12 +146,12 @@ let data = {
         {
           nombre: "Sofía",
           comentario: "Viaje a la costa y fue un lujo.",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
       ]
     },
@@ -164,12 +164,12 @@ let data = {
         {
           nombre: "Mauro",
           comentario: "Gran espacio para todo.",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
       ]
     },
@@ -182,12 +182,12 @@ let data = {
         {
           nombre: "Agustina",
           comentario: "Una bestia. Me encanta.",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
         ,{
           nombre: "Marcos",
           comentario: "¡GOD!",
-          imagen: "/images/users/default-image.png"
+          imagen:  "/images/perfil.png"
         }
       ]
     }

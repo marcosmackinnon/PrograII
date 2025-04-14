@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
+	<link width="" rel="shortcut icon" href="/images/logoheader.jpg" />
 	
-	<title> Mercado Liebre Argentina</title>
+	<title> Mercedez Benz Store</title>
 			<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Bootstrap Grid Stylesheet -->
@@ -16,18 +16,18 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include('partials/pHeaderLogueado', { user }) %> <!-- le paso al archivo partial la variable (user) que esta en el controlador (nombre de usuario)-->
+	<%- include('partials/pHeaderLogueado', {users: user}) %> <!-- le paso al archivo partial la variable (user) que esta en el controlador (nombre de usuario)-->
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="/images/users/default-image.png" alt="foto de perfil" class="foto-perfil">
+				<img src="/images/perfil.png" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"> <%= user.nombre %> <!-- cambio aca para que se vea el nombre 2) a) ??-->
+					<h1 class="main-title"> <%= user.usuario %> 
 						<a href="profile-edit.html">
 							<i class="fas fa-cog"></i>
 						</a>

@@ -13,8 +13,9 @@ const userController = {
   },
 
   profile: function(req, res) {
-    const user = usersData.users; 
-    res.render('profile', { user }); // le mandas el profile y el user 
+    const user = usersData.users;
+    const data = usersData; 
+    res.render('profile', { user, data }); // le mandas al profile el user y el data
   },
 
 

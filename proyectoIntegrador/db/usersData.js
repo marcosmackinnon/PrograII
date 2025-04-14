@@ -12,7 +12,7 @@ let data = {
   productos: [
     {
       id: 1,
-      imagen: "/images/autos/mercedesA200.avif",
+      imagen: "mercedesA200.avif",
       nombre: "Mercedes-Benz A200",
       descripcion: "Auto compacto y moderno.",
       comentarios: [
@@ -24,14 +24,14 @@ let data = {
         ,{
           nombre: "Marcos",
           comentario: "¡GOD, esta buenardo!",
-          imagen: "/images/perfil.png"
+          imagen: "perfil.png"
         }
       ]
       
     },
     {
       id: 2,
-      imagen: "/images/autos/mercedesC200.jpeg",
+      imagen: "mercedesC200.jpeg",
       nombre: "Mercedes-Benz C200",
       descripcion: "Cómodo y elegante.",
       comentarios: [
@@ -49,7 +49,7 @@ let data = {
     },
     {
       id: 3,
-      imagen: "/images/autos/mercedezAMGGT.jpeg",
+      imagen: "mercedezAMGGT.jpeg",
       nombre: "Mercedes-Benz AMG GT",
       descripcion: "Deportivo de alto rendimiento.",
       comentarios: [
@@ -67,7 +67,7 @@ let data = {
     },
     {
       id: 4,
-      imagen: "/images/autos/mercedezCLA250.jpeg",
+      imagen: "mercedezCLA250.jpeg",
       nombre: "Mercedes-Benz CLA 250",
       descripcion: "Estilo y eficiencia.",
       comentarios: [
@@ -85,7 +85,7 @@ let data = {
     },
     {
       id: 5,
-      imagen: "/images/autos/mercedezEClass.webp",
+      imagen: "mercedezEClass.webp",
       nombre: "Mercedes-Benz E-Class",
       descripcion: "Auto para la familia.",
       comentarios: [
@@ -103,7 +103,7 @@ let data = {
     },
     {
       id: 6,
-      imagen: "/images/autos/mercedezEQA.jpeg",
+      imagen: "mercedezEQA.jpeg",
       nombre: "Mercedes-Benz EQA",
       descripcion: "Eléctrico y silencioso.",
       comentarios: [
@@ -121,7 +121,7 @@ let data = {
     },
     {
       id: 7,
-      imagen: "/images/autos/mercedezGLA200.avif",
+      imagen: "mercedezGLA200.avif",
       nombre: "Mercedes-Benz GLA 200",
       descripcion: "Lindo y urbano.",
       comentarios: [
@@ -139,7 +139,7 @@ let data = {
     },
     {
       id: 8,
-      imagen: "/images/autos/mercedezGLB200.jpeg",
+      imagen: "mercedezGLB200.jpeg",
       nombre: "Mercedes-Benz GLB 200",
       descripcion: "Ideal para viajes.",
       comentarios: [
@@ -157,7 +157,7 @@ let data = {
     },
     {
       id: 9,
-      imagen: "/images/autos/mercedezGLC300.avif",
+      imagen: "mercedezGLC300.avif",
       nombre: "Mercedes-Benz GLC 300",
       descripcion: "SUV con buen espacio.",
       comentarios: [
@@ -175,7 +175,7 @@ let data = {
     },
     {
       id: 10,
-      imagen: "/images/autos/mercedezGLE450.webp",
+      imagen: "mercedezGLE450.webp",
       nombre: "Mercedes-Benz GLE 450",
       descripcion: "Grande y potente.",
       comentarios: [

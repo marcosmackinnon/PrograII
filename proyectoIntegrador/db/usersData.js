@@ -24,7 +24,7 @@ let data = {
         ,{
           nombre: "Marcos",
           comentario: "¡GOD, esta buenardo!",
-          imagen: "perfil.png"
+          imagen: "/images/perfil.png"
         }
       ]
       

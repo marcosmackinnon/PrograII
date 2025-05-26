@@ -20,7 +20,34 @@ const mainController = {
     db.Producto.findAll({
       include: [{ association: "usuario" }]
     })
-  }
-}
+    .then(function(productos) {
+      res.render("search-results", {
+        title: "Mercedez Benz Store",
+        data: productos
+      });
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  },
 
- 
+  profile: function(req, res) {
+    db.Usuario.findByPk(req.params.id, {
+      include: [
+        { association: "productos" },
+        { association: "comentarios" }
+      ]
+    })
+    .then(function(user) {
+      res.render("profile", {
+        title: "Mercedez Benz Store",
+        data: user
+      });
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  }
+};
+
+module.exports = mainController;

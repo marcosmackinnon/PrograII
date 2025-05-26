@@ -1,25 +1,20 @@
-
-const usersData = require("../db/usersData") // concectamos el users data 
-
+const db = require("../database/models");
 
 const userController = {
-
-  login: function(req, res) {
-    res.render('login');
-  },
-
-  register: function(req, res) {
-    res.render('register');
-  },
-
-  profile: function(req, res) {
-    const user = usersData.users;
-    const data = usersData; 
-    res.render('profile', { user, data }); // le mandas al profile el user y el data
-  },
-
-
-}
+  perfil: function (req, res) {
+    db.Usuario.findByPk(req.params.id, {
+      include: [
+        { association: "productos" },
+        { association: "comentarios" }
+      ]
+    })
+    .then(function (user) {
+      return res.render("perfil", { user: user });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+};
 
 module.exports = userController;
-

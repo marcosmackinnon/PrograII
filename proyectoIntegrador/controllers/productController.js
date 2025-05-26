@@ -1,26 +1,30 @@
-
-const usersData = require("../db/usersData") // concectamos el users data 
+const db = require("../database/models");
 
 const productController = {
-    product: function(req, res) {
-      let id = req.params.id; // agarramos el id de la URL
-      let product;
-     
-      for (let i = 0; i < usersData.productos.length; i++) {
-        if (usersData.productos[i].id == id) {
-          product = usersData.productos[i];
-        }
-      } 
-      res.render('product', { product: product });
-    },
-    
-      productAdd: function(req, res) {
-        const user = usersData.users; 
-        res.render('product-add', { user });  // le mandas a el product-add, el user 
-      },
+  product: function (req, res) {
+    db.Producto.findByPk(req.params.id, {
+      include: [
+        { association: "usuario" },
+        { association: "comentarios" }
+      ]
+    })
+    .then(function (product) {
+      return res.render("product", { product: product });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  },
 
+  productAdd: function (req, res) {
+    db.Usuario.findAll()
+    .then(function (users) {
+      return res.render("product-add", { user: users });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
 };
-
-
 
 module.exports = productController;

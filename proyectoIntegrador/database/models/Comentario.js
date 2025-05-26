@@ -50,6 +50,11 @@ module.exports = function (sequelize, dataTypes) {
         });
       };
       
+      Comentario.belongsTo(models.Producto, {
+        as: "producto",
+        foreignKey: "producto_id"
+      });
+      
 
 
 

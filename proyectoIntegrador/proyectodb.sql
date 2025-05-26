@@ -51,7 +51,7 @@ VALUES
 ('sofia.perez@gmail.com', 'sofia321', '2002-03-12', 42987654, 'images/products/default-image.png');
 
 
-INSERT INTO productos (usuario_id, imagen, nombre, descripcion)
+INSERT INTO productos (usuario_id, imagen_nombre, nombre, descripcion)
 VALUES
 (1, 'images/autos/mercedesA200.avif', 'Mercedes-Benz A200', 'Auto compacto y moderno.'),
 (2, 'images/autos/mercedesC200.jpeg', 'Mercedes-Benz C200', 'Cómodo y elegante.'),

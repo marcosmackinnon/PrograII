@@ -4,12 +4,13 @@ const userController = {
   profile: function (req, res) {
     db.Usuario.findByPk(req.params.id, {
       include: [
-        { association: "productos" },
+        { association: "productos", include: [{association: "comentarios"}] },
         { association: "comentarios" }
       ]
     })
     .then(function (user) {
-      return res.render("perfil", { user: user });
+      //res.send(user)
+      return res.render("profile", { user: user });
     })
     .catch(function (error) {
       console.log(error);

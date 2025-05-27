@@ -46,7 +46,7 @@
 						<article class="product-box_data">
 							<h2><%= data[i].nombre %></h2>
 							<p><%= data[i].descripcion %></p>
-							<a href="/users/perfil"> <%= data[i].usuario.email %></a>
+							<a href="/users/perfil/<%= data[i].usuario.id %>"> <%= data[i].usuario.email %></a>
 							<p>Comentarios: <%= data[i].comentarios.length %></p>
 						</article>
 					</a>

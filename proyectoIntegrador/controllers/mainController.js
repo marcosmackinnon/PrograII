@@ -3,9 +3,10 @@ const db = require("../database/models");
 const mainController = {
   index: function(req, res) {
     db.Producto.findAll({
-      include: [{ association: "usuario" }]
+      include: [{ association: "usuario" }, {association: "comentarios"}]
     })
     .then(function(productos) {
+      //res.send(productos)
       res.render("index", {
         title: "Mercedez Benz Store",
         data: productos
@@ -22,7 +23,7 @@ const mainController = {
     })
     .then(function(productos) {
       res.render("search-results", {
-        title: "Mercedez Benz Store",
+        title: "Mercedez Benz Store",  // corregir todos los title estos (definirlo en el partial del head)
         data: productos
       });
     })

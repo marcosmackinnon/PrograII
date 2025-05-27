@@ -1,7 +1,7 @@
 const db = require("../database/models");
 
 const userController = {
-  perfil: function (req, res) {
+  profile: function (req, res) {
     db.Usuario.findByPk(req.params.id, {
       include: [
         { association: "productos" },
@@ -14,7 +14,14 @@ const userController = {
     .catch(function (error) {
       console.log(error);
     });
+  },
+  login: function(req,res){
+    return res.render("login");
+  },
+  register: function(req,res){
+    return res.render("register");
   }
+  
 };
 
 module.exports = userController;

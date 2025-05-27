@@ -16,7 +16,7 @@ const productController = {
     });
   },
 
-  productAdd: function (req, res) {
+  productAdd: function (req, res) { //cambiarlo
     db.Usuario.findAll()
     .then(function (users) {
       return res.render("product-add", { user: users });

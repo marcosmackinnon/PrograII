@@ -24,7 +24,7 @@ const mainController = {
     db.Producto.findAll({
       
       where: {
-        nombre:{ [Op.like]: "%${search}%" }
+        nombre:{ [Op.like]: `%${search}%` }
       },
       include: [{ association: "usuario" }]
     })

@@ -1,4 +1,6 @@
+const { where } = require("sequelize");
 const db = require("../database/models");
+let Op = db.sequelize.Op;
 
 const mainController = {
   index: function(req, res) {
@@ -18,13 +20,20 @@ const mainController = {
   },
 
   searchResults: function(req, res) {
+    let search = req.query.search;
     db.Producto.findAll({
+      
+      where: {
+        nombre:{ [Op.like]: "%${search}%" }
+      },
       include: [{ association: "usuario" }]
     })
     .then(function(productos) {
       res.render("search-results", {
         title: "Mercedez Benz Store",  // corregir todos los title estos (definirlo en el partial del head)
-        data: productos
+        data: productos,
+        search: search
+        
       });
     })
     .catch(function(error) {

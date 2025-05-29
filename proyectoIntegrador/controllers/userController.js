@@ -21,8 +21,15 @@ const userController = {
   },
   register: function(req,res){
     return res.render("register");
+  },
+  registerCreate: function (req, res) {
+    // 1. Capturar los datos del formulario
+    let email = req.body.email;
+    let nombre = req.body.usuario;
+    let contrasena = req.body.contrasena;
+    let nacimiento = req.body.nacimiento;
+
   }
-  
 };
 
 module.exports = userController;

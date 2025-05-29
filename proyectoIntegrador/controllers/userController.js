@@ -56,15 +56,15 @@ const userController = {
 
       // ENCRIPTAR CONTRASEÑA
       
-      let passHash = bcrypt.hashSync(contrasena, 10);
+      let encriptado = bcrypt.hashSync(contrasena, 10);
 
       // CREAR EL USUARIO
       db.Usuario.create({
           email: email,
           nombre: nombre,
-          contrasena: passHash,
+          contrasena: encriptado,
           fecha_nacimiento: nacimiento,
-          createdAt: new Date()
+          
       })
       .then(function() {
           return res.redirect('/users/login');

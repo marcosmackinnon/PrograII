@@ -1,4 +1,5 @@
 const db = require("../database/models");
+let bcrypt = require('bcryptjs');
 
 const userController = {
   profile: function (req, res) {
@@ -29,6 +30,54 @@ const userController = {
     let contrasena = req.body.contrasena;
     let nacimiento = req.body.nacimiento;
 
+    // VALIDACIÓN 1: campo email vacío
+    if (email == "") {
+      return res.send("Debes completar el campo de email.");
+  }
+
+  // VALIDACIÓN 2: campo contraseña vacío
+  if (contrasena == "") {
+      return res.send("Debes completar la contraseña.");
+  }
+
+  // VALIDACIÓN 3: contraseña demasiado corta
+  if (contrasena.length < 3) {
+      return res.send("La contraseña debe tener al menos 3 caracteres.");
+  }
+
+  // BUSCAR EMAIL EN LA BASE
+  db.Usuario.findOne({
+      where: { email: email }
+  })
+  .then(function(usuarioExistente) {
+      if (usuarioExistente) { //duda
+          return res.send("Este email ya está registrado.");
+      }
+
+      // ENCRIPTAR CONTRASEÑA
+      
+      let passHash = bcrypt.hashSync(contrasena, 10);
+
+      // CREAR EL USUARIO
+      db.Usuario.create({
+          email: email,
+          nombre: nombre,
+          contrasena: passHash,
+          fecha_nacimiento: nacimiento,
+          createdAt: new Date()
+      })
+      .then(function() {
+          return res.redirect('/users/login');
+      })
+      .catch(function(error) {
+          console.log(error);
+          res.send("Error al crear el usuario.");
+      });
+  })
+  .catch(function(error) {
+      console.log(error);
+      res.send("Error al verificar el email.");
+  });
   }
 };
 

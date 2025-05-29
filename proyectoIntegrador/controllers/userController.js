@@ -29,6 +29,8 @@ const userController = {
     let nombre = req.body.usuario;
     let contrasena = req.body.contrasena;
     let nacimiento = req.body.nacimiento;
+    let dni = req.body.dni;
+    let fotoPerfil = req.body.foto_perfil;
 
     // VALIDACIÓN 1: campo email vacío
     if (email == "") {
@@ -64,6 +66,8 @@ const userController = {
           nombre: nombre,
           contrasena: encriptado,
           fecha_nacimiento: nacimiento,
+          dni: dni,
+          foto_perfil: fotoPerfil
           
       })
       .then(function() {

@@ -4,8 +4,11 @@ const productController = {
   product: function (req, res) {
     db.Producto.findByPk(req.params.id, {
       include: [
-        { association: "usuario" },
-        { association: "comentarios" }
+        { association: "usuario" },// quién publicó el producto
+        { association: "comentarios", 
+          
+          include: [{ association: "usuario" }] // quién hizo el comentario 
+        }
       ]
     })
     .then(function (product) {

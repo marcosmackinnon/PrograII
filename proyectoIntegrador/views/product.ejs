@@ -30,18 +30,20 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/images/autos/<%= product.imagen %>" alt="<%= product.nombre %>" class="product-detail-img">
+					<img src="/<%= product.imagen_nombre %>" alt="<%= product.nombre %>" class="product-detail-img">
 					<p class="product-detail-description"><%= product.descripcion %></p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 						<% for (let i = 0; i < product.comentarios.length; i++) { %>
 							<article>
-								<img src="<%= product.comentarios[i].imagen %>" alt="foto perfil">
+								<img src="/<%= product.comentarios[i].usuario.foto_perfil %>" alt="foto perfil">
 								<div class="data">
 									<p class="user">
-										<strong><a href="/users/perfil"><%= product.comentarios[i].nombre %>:</a></strong>
-										<%= product.comentarios[i].comentario %>
+										<a href="/users/perfil/<%= product.comentarios[i].usuario.id %>">
+											<%= product.comentarios[i].usuario.email %>
+										  </a>
+										  <p><%= product.comentarios[i].texto %></p>
 									</p>
 								</div>
 							</article>

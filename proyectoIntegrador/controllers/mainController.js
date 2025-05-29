@@ -25,7 +25,11 @@ const mainController = {
       where: {
         nombre:{ [Op.like]: `%${search}%` }
       },
-      include: [{ association: "usuario" }]
+      include: [
+        { association: "usuario" },
+        { association: "comentarios" }
+      ]
+      
     })
     .then(function(productos) {
       res.render("search-results", {

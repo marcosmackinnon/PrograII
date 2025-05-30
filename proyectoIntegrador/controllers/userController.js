@@ -93,7 +93,7 @@ const userController = {
 
     // Si el usuario ya está logueado, lo redireccionamos a su perfil
     if (req.session.user) {
-        return res.redirect('/users/profile/' + req.session.user.id);
+        return res.redirect('/users/profile/' + req.session.usuarioLogueado.id);
     }
 
     // Buscamos el usuario en la base de datos por su email

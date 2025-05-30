@@ -8,6 +8,8 @@ router.get('/register', userController.register);
 router.get('/profile/:id', userController.profile);
 router.post('/register', userController.registerCreate);
 router.post('/login', userController.loginProcesar);
+router.post('/logout', userController.loginDestroy);
+
 
 
 

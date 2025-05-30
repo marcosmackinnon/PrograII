@@ -21,9 +21,7 @@ const userController = {
     return res.render("login");
   },
   register: function(req,res){
-  
-    return res.render("register");
-  
+    return res.render('register')
   },
 
   registerCreate: function (req, res) {

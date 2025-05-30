@@ -83,7 +83,56 @@ const userController = {
       console.log(error);
       res.send("Error al verificar el email.");
   });
-  }
+  },
+  loginProcesar: function(req, res) {
+    let userInfo = {
+        email: req.body.email,
+        password: req.body.password,
+        remember: req.body.remember
+    };
+
+    // Si el usuario ya está logueado, lo redireccionamos a su perfil
+    if (req.session.user) {
+        return res.redirect('/users/profile/' + req.session.user.id);
+    }
+
+    // Buscamos el usuario en la base de datos por su email
+    db.Usuario.findOne({
+        where: { email: userInfo.email }
+    })
+    .then(function(usuario) {
+        // Validación 1: si el email no existe
+        if (!usuario) {
+            return res.render('login', { error: "Email no registrado" });
+        }
+
+        // Validación 2: si la contraseña no coincide
+        const contraCoincide = bcrypt.compareSync(userInfo.password, usuario.contrasena);
+        if (!contraCoincide) {
+            return res.render('login', { error: "Contraseña incorrecta" });
+        }
+
+        // Guardamos el usuario en session
+        req.session.user = usuario;
+
+        // Si el usuario tildó "recordarme", guardamos cookie
+        if (userInfo.remember) {
+            res.cookie('userId', usuario.id, { maxAge: 1000 * 60 * 5 }); // 5 minutos
+        }
+
+        // Redireccionamos al perfil
+        return res.redirect('/users/profile/' + usuario.id);
+    })
+    .catch(function(error) {
+        console.error(error);
+        res.send("Ocurrió un error al intentar iniciar sesión.");
+    });
+},
+
+
+
 };
+
+
 
 module.exports = userController;

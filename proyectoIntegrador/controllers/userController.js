@@ -128,7 +128,11 @@ const userController = {
         res.send("Ocurrió un error al intentar iniciar sesión.");
     });
 },
-
+loginDestroy: function (req, res) {
+  res.clearCookie('userId');
+  req.session.destroy();
+  res.redirect('/');
+},
 
 
 };

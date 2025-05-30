@@ -7,7 +7,7 @@ const productController = {
         { association: "usuario" },// quién publicó el producto
         { association: "comentarios", 
           
-          include: [{ association: "usuario" }] // quién hizo el comentario 
+          include: [{ association: "usuarioComentario" }] // quién hizo el comentario 
         }
       ]
     })

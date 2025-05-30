@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const session = require("express-session");
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
@@ -27,14 +29,35 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter)
 
+app.use(session({
+  secret: "Nuestro mensaje secreto",
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(function (req, res, next) {
+  if (req.session.usuarioLogueado != undefined) {
+    res.locals.user = req.session.usuarioLogueado
+  }
+  return next();
+});
+
+app.use(function (req, res, next) {
+  if (req.session.usuarioLogueado == undefined && req.cookies.usuarioLogueado != undefined) {
+    res.locals.user = req.cookies.usuarioLogueado
+    req.session.usuarioLogueado = req.cookies.usuarioLogueado
+  }
+  return next();
+});
+
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

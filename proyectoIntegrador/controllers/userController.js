@@ -21,16 +21,19 @@ const userController = {
     return res.render("login");
   },
   register: function(req,res){
+  
     return res.render("register");
+  
   },
+
   registerCreate: function (req, res) {
     // 1. Capturar los datos del formulario
     let email = req.body.email;
     let nombre = req.body.usuario;
     let contrasena = req.body.contrasena;
-    let nacimiento = req.body.nacimiento;
+    let fecha_nacimiento = req.body.fecha_nacimiento;
     let dni = req.body.dni;
-    let fotoPerfil = req.body.foto_perfil;
+    let foto_perfil = req.body.foto_perfil
 
     // VALIDACIÓN 1: campo email vacío
     if (email == "") {
@@ -65,9 +68,9 @@ const userController = {
           email: email,
           nombre: nombre,
           contrasena: encriptado,
-          fecha_nacimiento: nacimiento,
+          fecha_nacimiento: fecha_nacimiento,
           dni: dni,
-          foto_perfil: fotoPerfil
+          foto_perfil: foto_perfil
           
       })
       .then(function() {

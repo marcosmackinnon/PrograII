@@ -68,7 +68,9 @@ const productController = {
       usuario_id: req.session.usuarioLogueado.id,
       producto_id: productoId
     })
- 
+    .then(function () {
+      return res.redirect('/product/' + productoId);
+    })
     .catch(function (error) {
       console.log(error);
       res.send("Error al agregar el comentario.");

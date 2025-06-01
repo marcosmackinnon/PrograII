@@ -63,7 +63,12 @@ const productController = {
     let textoComentario = req.body.comentario;
     let productoId = req.params.id;
   
-    
+    db.Comentario.create({
+      texto: textoComentario,
+      usuario_id: req.session.usuarioLogueado.id,
+      producto_id: productoId
+    })
+ 
     .catch(function (error) {
       console.log(error);
       res.send("Error al agregar el comentario.");

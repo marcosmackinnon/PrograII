@@ -53,6 +53,18 @@ const productController = {
       console.log(error);
       res.send("Error al crear el producto.");
     });
+  },
+  agregarComentario: function (req, res) {
+    // Validar sesión
+    if (req.session.usuarioLogueado == undefined) {
+      return res.redirect('/users/login');
+    }
+  
+    
+    .catch(function (error) {
+      console.log(error);
+      res.send("Error al agregar el comentario.");
+    });
   }
 };
 

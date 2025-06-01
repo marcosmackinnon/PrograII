@@ -7,8 +7,11 @@ const productController = require('../controllers/productController'); //trae el
 router.get('/agregar', productController.productAdd);
 router.post('/agregar', productController.productCreate);
 
+router.post('/:id/comentario', productController.agregarComentario);
+
+
 router.get('/:id', productController.product);  // ESTAR ATENTO A ESTO POR SI NOS PREGUNTA SI SE PUEDE ROMPER 
 
-// exporto la ruta 
+
 
 module.exports = router;

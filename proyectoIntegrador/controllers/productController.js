@@ -60,6 +60,9 @@ const productController = {
       return res.redirect('/users/login');
     }
   
+    let textoComentario = req.body.comentario;
+    let productoId = req.params.id;
+  
     
     .catch(function (error) {
       console.log(error);

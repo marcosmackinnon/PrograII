@@ -5,6 +5,14 @@
 
 /* tipogrfias */
 
+.search-title {
+  margin-left: 40px;  
+  margin-top: 20px;                              
+  font-weight: 00;
+  color: #333; 
+}
+
+
 
 /*====== Variables ======*/
 :root {

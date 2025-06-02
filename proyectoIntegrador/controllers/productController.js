@@ -31,22 +31,19 @@ const productController = {
   
   productCreate: function (req, res) {
 
-
-// Validar que esté logueado ?? es necesario hacer esto?  PREGUNTARRRRRRRRRRRRRRRRRR
-
-    let nombre = req.body.nombre;
+    //let nombre = req.body.nombre;
     let descripcion = req.body.descripcion;
     let imagen = req.body.imagen;
   
+    console.log(req.body)
 
     db.Producto.create({
-      nombre: nombre,
+      nombre: req.body.nombre,
       descripcion: descripcion,
       imagen_nombre: imagen,
       usuario_id: req.session.usuarioLogueado.id // me aseguro de que está guardado en sesión
     })
     .then(function () {
-     
       return res.redirect('/');
     })
     .catch(function (error) {
@@ -54,6 +51,8 @@ const productController = {
       res.send("Error al crear el producto.");
     });
   },
+
+
   agregarComentario: function (req, res) {
     // Validar sesión
     if (req.session.usuarioLogueado == undefined) {

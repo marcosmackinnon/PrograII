@@ -10,7 +10,8 @@ const userController = {
       ]
     })
     .then(function (user) {
-      //res.send(user)
+      
+      console.log(user)
       return res.render("profile", { user: user });
     })
     .catch(function (error) {
@@ -25,7 +26,7 @@ const userController = {
   },
 
   registerCreate: function (req, res) {
-    // 1. Capturar los datos del formulario
+   
     let email = req.body.email;
     let nombre = req.body.usuario;
     let contrasena = req.body.contrasena;
@@ -33,22 +34,20 @@ const userController = {
     let dni = req.body.dni;
     let foto_perfil = req.body.foto_perfil
 
-    // VALIDACIÓN 1: campo email vacío
+   
     if (email == "") {
       return res.send("Debes completar el campo de email.");
   }
 
-  // VALIDACIÓN 2: campo contraseña vacío
+ 
   if (contrasena == "") {
       return res.send("Debes completar la contraseña.");
   }
 
-  // VALIDACIÓN 3: contraseña demasiado corta
   if (contrasena.length < 3) {
       return res.send("La contraseña debe tener al menos 3 caracteres.");
   }
 
-  // BUSCAR EMAIL EN LA BASE
   db.Usuario.findOne({
       where: { email: email }
   })
@@ -57,11 +56,10 @@ const userController = {
           return res.send("Este email ya está registrado.");
       }
 
-      // ENCRIPTAR CONTRASEÑA
       
       let encriptado = bcrypt.hashSync(contrasena, 10);
 
-      // CREAR EL USUARIO
+  
       db.Usuario.create({
           email: email,
           nombre: nombre,
@@ -96,31 +94,31 @@ const userController = {
         return res.redirect('/users/profile/' + req.session.usuarioLogueado.id);
     }
 
-    // Buscamos el usuario en la base de datos por su email
+    // busco el usuario en la base de datos por su email
     db.Usuario.findOne({
         where: { email: userInfo.email }
     })
     .then(function(usuario) {
-        // Validación 1: si el email no existe
+        // hago la validacion 1: si el email no existe
         if (!usuario) {
             return res.render('login', { error: "Email no registrado" });
         }
 
-        // Validación 2: si la contraseña no coincide
+        // la validacion 2: si la contraseña no coincide
         const contraCoincide = bcrypt.compareSync(userInfo.password, usuario.contrasena);
         if (!contraCoincide) {
             return res.render('login', { error: "Contraseña incorrecta" });
         }
 
-        // Guardamos el usuario en session
+        // guardo el usuario en session
         req.session.usuarioLogueado = usuario;
 
         // Si el usuario tildó "recordarme", guardamos cookie
-        if (userInfo.remember) {
-            res.cookie('userId', usuario.id, { maxAge: 1000 * 60 * 5 }); // 5 minutos
+        if (userInfo.remember ) {
+            res.cookie('usuarioLogueado', usuario, { maxAge: 1000 * 60 * 5 }); // 5 minutos - SABERSE BIEN ESTO PARA EL ORAL 
         }
 
-        // Redireccionamos al perfil
+        
         return res.redirect('/users/profile/' + usuario.id);
     })
     .catch(function(error) {
@@ -129,7 +127,7 @@ const userController = {
     });
 },
 loginDestroy: function (req, res) {
-  res.clearCookie('userId');
+  res.clearCookie('usuarioLogueado');
   req.session.destroy();
   res.redirect('/');
 },

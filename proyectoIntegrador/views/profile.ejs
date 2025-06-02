@@ -16,7 +16,7 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include('partials/header') %> <!-- le paso al archivo partial la variable (user) que esta en el controlador (nombre de usuario)-->
+	<%- include('partials/header') %> 
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
@@ -35,7 +35,7 @@
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>
-					<ul class="">
+					<ul class="formulario-registro">
 						<li><%= user.email %></li>
 						<li><%= user.productos.length %> productos</li>
 						<li>200 seguidores</li>

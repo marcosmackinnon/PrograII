@@ -21,7 +21,7 @@
 	<%- include('partials/header') %>
 	<!-- /Header -->
 
-	<h2>Resultados para "<%= search %>"</h2>
+	<h2 class="search-title"> Resultados para "<%= search %>"</h2>
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">
@@ -43,7 +43,7 @@
 									<p>Comentarios: <%= data[i].comentarios.length %></p>
 									<p>
 										Subido por: 
-										<a href="/perfil/<%= data[i].usuario.id %>">
+										<a href="/users/profile/<%= data[i].usuario.id %>">
 											<%= data[i].usuario.email %>
 										</a>
 									</p>
@@ -54,7 +54,7 @@
 				<% } %>
 			<% } else { %>
 				<div class="col-12">
-					<p>No hay resultados para su búsqueda.</p>
+					<h2>No hay resultados para su búsqueda.</h2>
 				</div>
 			<% } %>
 		</div>

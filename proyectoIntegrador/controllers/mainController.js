@@ -32,6 +32,7 @@ const mainController = {
       
     })
     .then(function(productos) {
+      console.log(productos)
       res.render("search-results", {
         title: "Mercedez Benz Store",  // corregir todos los title estos (definirlo en el partial del head)
         data: productos,

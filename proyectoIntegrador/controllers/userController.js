@@ -113,7 +113,7 @@ const userController = {
         }
 
         // Guardamos el usuario en session
-        req.session.user = usuario;
+        req.session.usuarioLogueado = usuario;
 
         // Si el usuario tildó "recordarme", guardamos cookie
         if (userInfo.remember) {
